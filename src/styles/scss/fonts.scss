@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url('~source-sans-pro/WOFF2/TTF/SourceSansPro-Regular.ttf.woff2')
+      format('woff2'),
+    url('~source-sans-pro/WOFF/OTF/SourceSansPro-Regular.otf.woff')
+      format('woff');
+  unicode-range: U+0000-00ff;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('~npm-font-open-sans/fonts/Semibold/OpenSans-Semibold.woff2')
+      format('woff2'),
+    url('~npm-font-open-sans/fonts/Semibold/OpenSans-Semibold.woff')
+      format('woff');
+  unicode-range: U+0000-00ff;
+}

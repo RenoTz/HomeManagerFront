@@ -1,0 +1,100 @@
+// Colors:
+// Grayscale and brand colors for use across Bootstrap.
+$primary: #3e8acc;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+
+// Options:
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-rounded: true;
+$enable-shadows: false;
+$enable-gradients: false;
+$enable-transitions: true;
+$enable-hover-media-query: false;
+$enable-grid-classes: true;
+$enable-print-styles: true;
+
+// Components:
+// Define common padding and border radius sizes and more.
+$border-radius: 0.15rem;
+$border-radius-lg: 0.125rem;
+$border-radius-sm: 0.1rem;
+
+// Body:
+// Settings for the `<body>` element.
+$body-bg: #e4e5e6;
+
+// Typography:
+// Font, line-height, and color for body text, headings, and more.
+$font-size-base: 1rem;
+
+/* Couleurs */
+$grisLeger: #eeeeee;
+$gris_arriere_plan: #f4f4f4;
+$blanc_creation_dia: #ffffff;
+$bleu: #0cb8c0;
+$bleu_degrade: #0fbfc8;
+$gris_sombre: #2d353b;
+$gris_encore_plus_clair: #edf1f6;
+$fond_blanc_liste: #e0e3e6;
+$grisMoyen: #999999;
+$turquoise: #2ac1c7;
+$grisTresClair: #c4cad0;
+$grisFonce: #637181;
+$rougeAlerte: #ff414b;
+$grisTresFonce: #333333;
+$transparent: transparent;
+$rougeClair: #b04442;
+$gris: #dddddd;
+$bleuClair: #add8e6;
+$noir: #000000;
+$blanc: #ffffff;
+$grisBleu: #dde5f2;
+$corailLight: #f08080;
+$orange: #ff9641;
+$orangeLight: #f2b76a;
+$jauneClair: #ffe2bc;
+$bleuGris: #3d4650;
+$bleuMenuLateral: #5fa2db;
+
+/*  Variables stylés multiples  */
+%boutonMenuOnglet {
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+@mixin boutonMenuOnglet {
+  @extend %boutonMenuOnglet;
+  border: 1px solid $transparent;
+  background-color: $turquoise;
+  color: $blanc;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover,
+  &.ui-tabview-selected {
+    background-color: $blanc;
+    border: 1px solid $turquoise;
+    color: $turquoise;
+
+    i {
+      color: $turquoise;
+    }
+
+    span {
+      color: $turquoise;
+    }
+
+    li {
+      color: $turquoise;
+    }
+  }
+}
