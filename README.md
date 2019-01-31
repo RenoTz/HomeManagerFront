@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/RenoTz/quickstarter-projet-web-angular.svg?branch=master)](https://travis-ci.org/RenoTz/quickstarter-projet-web-angular)
+
 # Ng6
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
