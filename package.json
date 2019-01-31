@@ -2,13 +2,18 @@
   "name": "ng6",
   "version": "0.0.0",
   "scripts": {
+    "build": "ng build --extract-css",
+    "build:aot": "npm run build:aot:prod",
+    "build:aot:dev": "cross-env BUILD_AOT=1 npm run build:dev",
+    "ci:travis": "cross-env BUILD_E2E=1 npm run lint && npm run test:ci && npm run build:aot && npm run e2e:travis",
+    "e2e": "ng e2e",
+    "e2e:travis": "npm-run-all -p -r server:prod:ci protractor:delay",
+    "lint": "npm run tslint \"src/**/*.ts\"",
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
-    "build": "ng build --extract-css",
     "test": "ng test --code-coverage",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "ci:travis": "cross-env BUILD_E2E=1 npm run lint && npm run test:ci && npm run build:aot && npm run e2e:travis"
+    "test:ci": "karma start --single-run --browsers ChromeTravisCi",
+    "tslint": "tslint \"src/**/*.ts\" --project tsconfig.json"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +42,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.3.0",
+    "cross-env": "^5.2.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.0.0",
