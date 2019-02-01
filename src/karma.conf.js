@@ -1,9 +1,12 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
-module.exports = function (config) {
+// process.env.CHROME_BIN = require('puppeteer').executablePath();
+
+module.exports = function(config) {
   config.set({
     basePath: '',
+    browserNoActivityTimeout: 30000,
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
       require('karma-jasmine'),
@@ -14,13 +17,13 @@ module.exports = function (config) {
       require('karma-phantomjs-launcher')
     ],
     client: {
-      clearContext: false, // leave Jasmine Spec Runner output visible in browser
+      clearContext: false, // leave Jasmine Spec Runner output visible in browser,
       jasmine: {
         random: false
       }
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, '../coverage'),
+      dir: require('path').join(__dirname, '../../../../target/results/coverage'),
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
@@ -30,6 +33,6 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['PhantomJS'],
-    singleRun: false
+    singleRun: true
   });
 };
