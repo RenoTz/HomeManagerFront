@@ -4,15 +4,15 @@ addons:
 
 language: node_js
 node_js:
-  - "10.5"
+  - "8"
 
 branches:
   only:
-    - master
+  - master
 
 before_script:
   - npm install -g @angular/cli
 
 script:
   - ng build --prod --aot
-- ng test
+  - ng test
